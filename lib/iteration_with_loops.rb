@@ -9,10 +9,11 @@ def join_nested_strings(src)
     element_index = 0 
     while element_index < src[row_index].count do 
       if src[row_index][element_index].class == String 
+        result_string = "#{result_string} " + src[row_index][element_index] 
+      end  
       element_index+=1 
     end
     row_index+=1 
   end
-  
-  
+  result_string
 end
